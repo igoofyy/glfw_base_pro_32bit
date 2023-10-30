@@ -1,10 +1,13 @@
 #include<glad/glad.h>
 #include "glfw3.h"
-
 #include<iostream>
 
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
+
+#include "glm.hpp"
+#include "gtc/matrix_transform.hpp"
+#include "gtc/type_ptr.hpp"
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 int main()
@@ -36,6 +39,9 @@ int main()
 
     while (!glfwWindowShouldClose(window))
     {
+ 
+        glClearColor(1.0f, 0.0f, 0.5f, 1.0f);
+        glClear(GL_COLOR_BUFFER_BIT);
         glfwSwapBuffers(window);
         glfwPollEvents();
     }

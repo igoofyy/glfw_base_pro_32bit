@@ -88,7 +88,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(LocalDebuggerWorkingDirectory)lib\glfw\include\GLFW;$(LocalDebuggerWorkingDirectory)lib\glad\include;$(LocalDebuggerWorkingDirectory)lib\stb_image;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(LocalDebuggerWorkingDirectory)lib\glfw\include\GLFW;$(LocalDebuggerWorkingDirectory)lib\glad\include;$(LocalDebuggerWorkingDirectory)lib\stb_image;$(LocalDebuggerWorkingDirectory)lib\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
