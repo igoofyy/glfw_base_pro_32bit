@@ -50,7 +50,7 @@ int main()
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     //使用兼容性模式
-    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_COMPAT_PROFILE);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
     GLFWwindow* window = glfwCreateWindow(800, 600, "LearnOpenGL", NULL, NULL);
     if (window == NULL)
@@ -78,14 +78,17 @@ int main()
     generate_triangel_with_vertices_amount(vertices, vertices_amount);
 
     // 开始使用VBO绑定
-    GLuint VBO;
+    GLuint VBO, VAO;
+    glGenBuffers(1, &VAO);
     glGenBuffers(1, &VBO);
+    glBindVertexArray(VAO);
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
 
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glBindVertexArray(0);
 
     // 开始编译着色器
     unsigned int verShader = glCreateShader(GL_VERTEX_SHADER);
@@ -140,15 +143,16 @@ int main()
         glClear(GL_COLOR_BUFFER_BIT);
 
         glUseProgram(shaderProgramer);
-        // 绑定VBO
-        glBindBuffer(GL_ARRAY_BUFFER, VBO);
-        glDrawArrays(GL_TRIANGLES, 0, 3);
+        // 绑定VAO
+        //glBindVertexArray(VAO);
+        glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, 0);
 
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
 
     // 清理操作
+    glDeleteVertexArrays(1, &VAO);
     glDeleteBuffers(1, &VBO);
     glDeleteProgram(shaderProgramer);
 
