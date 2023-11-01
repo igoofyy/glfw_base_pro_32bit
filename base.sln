@@ -11,8 +11,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2三角形-VAO", "2.你好�
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3四边形", "2.四边形\四边形.vcxproj", "{03C8C3DF-996A-4C00-8196-DF0216BD599B}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "4纹理", "2.纹理\纹理.vcxproj", "{94B126D2-FFB9-4CEC-9724-BB4E80059FCF}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "4四边形EBO", "2.四边形 - EBO\四边形vbo.vcxproj", "{68861A0A-0BC6-406D-885E-ABFBDE7C3759}"
 EndProject
 Global
@@ -55,14 +53,6 @@ Global
 		{03C8C3DF-996A-4C00-8196-DF0216BD599B}.Release|x64.Build.0 = Release|x64
 		{03C8C3DF-996A-4C00-8196-DF0216BD599B}.Release|x86.ActiveCfg = Release|Win32
 		{03C8C3DF-996A-4C00-8196-DF0216BD599B}.Release|x86.Build.0 = Release|Win32
-		{94B126D2-FFB9-4CEC-9724-BB4E80059FCF}.Debug|x64.ActiveCfg = Debug|x64
-		{94B126D2-FFB9-4CEC-9724-BB4E80059FCF}.Debug|x64.Build.0 = Debug|x64
-		{94B126D2-FFB9-4CEC-9724-BB4E80059FCF}.Debug|x86.ActiveCfg = Debug|Win32
-		{94B126D2-FFB9-4CEC-9724-BB4E80059FCF}.Debug|x86.Build.0 = Debug|Win32
-		{94B126D2-FFB9-4CEC-9724-BB4E80059FCF}.Release|x64.ActiveCfg = Release|x64
-		{94B126D2-FFB9-4CEC-9724-BB4E80059FCF}.Release|x64.Build.0 = Release|x64
-		{94B126D2-FFB9-4CEC-9724-BB4E80059FCF}.Release|x86.ActiveCfg = Release|Win32
-		{94B126D2-FFB9-4CEC-9724-BB4E80059FCF}.Release|x86.Build.0 = Release|Win32
 		{68861A0A-0BC6-406D-885E-ABFBDE7C3759}.Debug|x64.ActiveCfg = Debug|x64
 		{68861A0A-0BC6-406D-885E-ABFBDE7C3759}.Debug|x64.Build.0 = Debug|x64
 		{68861A0A-0BC6-406D-885E-ABFBDE7C3759}.Debug|x86.ActiveCfg = Debug|Win32
